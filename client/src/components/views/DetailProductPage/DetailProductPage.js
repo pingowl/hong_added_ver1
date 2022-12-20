@@ -55,7 +55,7 @@ function DetailProductPage(props) {
               {/* ProductInfo */}
               <ProductInfo detail={Product} />
           </Col>
-          <Comments CommentLists={CommentLists} postId={Video._id} refreshFunction={updateComment} />
+          <Comments CommentLists={CommentLists} postId={productId} refreshFunction={updateComment} />
       </Row>
 
     </div>
