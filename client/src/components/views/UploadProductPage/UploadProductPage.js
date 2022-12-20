@@ -76,6 +76,16 @@ function UploadProductPage(props) {
                     alert('식당 정보 업로드에 실패 했습니다.')
                 }
             })
+            .catch((error) => {
+                if (error.response) {
+                  console.log(error.response);
+                  console.log("server responded");
+                } else if (error.request) {
+                  console.log("network error");
+                } else {
+                  console.log(error);
+                }
+            });    
     }
 
     return (

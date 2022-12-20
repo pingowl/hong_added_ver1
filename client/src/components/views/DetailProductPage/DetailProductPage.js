@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Row, Col } from 'antd';
 import ProductImage from './Sections/ProductImage';
@@ -8,7 +9,8 @@ import Comments from './Sections/Comments';
 
 function DetailProductPage(props) {
 
-  const productId = props.match.params.productId
+  //const productId = props.match.params.productId
+  const { productId } = useParams(); 
   const variable = {  productId: productId }
 
   const [Product, setProduct] = useState({})
